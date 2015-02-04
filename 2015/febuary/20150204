@@ -1,0 +1,18 @@
+Daily Note
+
+1.
+Enumerator is a class using lazy loading concpet
+which will do things only when what it is going to do and the scope of work
+
+2.
+When using block with parameter, you can assign default value to parameter
+e.g.
+  (1..10).each {|n, sum=0| sum = sum + n }
+  # but sum will be throw away every time executed
+  # and build up again every next time
+
+3.
+String, Integer, TrueClass, FalseClass & NilClass are classes without attr_writter
+
+4.
+studied 5 methods of array, check: 20150204.rb
