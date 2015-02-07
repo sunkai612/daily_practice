@@ -1,0 +1,10 @@
+Daily Note
+
+1.
+many ways to remove thing(s) from an array:
+delete(val), delete_at(index), pop, shift, clear, -, reject, select, compact
+
+cities.delete("")
+["Kathmandu", "Pokhara", "", "Dharan", "Butwal"] - ["", nil]
+cities = ["Kathmandu", "Pokhara", "", "Dharan", "Butwal"].reject{ |e| e.empty? }
+cities = ["Kathmandu", "Pokhara", "", "Dharan", "Butwal"].select &:present?

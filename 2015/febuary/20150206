@@ -3,3 +3,5 @@ Daily Note
 1.
 serializable_hash vs attributes
 
+2.
+any? vs blank? vs empty? vs nil?
