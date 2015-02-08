@@ -1,0 +1,71 @@
+Daily Note
+
+1.
+We can use a technique to open up an object's singleten class
+this class methods will specifically belongs to that object
+
+for example:
+  a = "John"
+  class << a
+    def greet
+      "Hi, I'm John, what's up?"
+    end
+  end
+  a.greet                         #=> "Hi, I'm John, what's up?"
+
+this technique might be pretty useful for reducing typing when creating class methods
+
+for example:
+  original:
+    class foo
+      def self.bar_one
+        do_something
+      end
+
+      def self.bar_two
+        do_something
+      end
+
+      def self.bar_three
+        do_something
+      end
+    end
+  with this technique:
+    class foo
+      class << self
+        def bar_one
+          do_something
+        end
+
+        def bar_two
+          do_something
+        end
+
+        def bar_three
+          do_something
+        end        
+      end
+    end
+
+2.
+When executing ruby code in command line
+We will do:
+  ruby file_name.rb
+
+If we want to collect executing result into result.txt
+Besides using ruby File class and related methods,
+we can use command line build in redirecting methods
+
+For example, to print result in result.txt, we can:
+  ruby file_name.rb > result.txt
+
+However, using > will overwrite original file content with executing output,
+to avoid this, we can use below method to append except overwrite:
+  ruby file_name.rb >> result.txt
+
+Also, to get input from file except keyboard input, we can:
+  ruby file_name.rb < parameter
+
+If we want to use executing result to do more things, we can:
+  ruby file_name.rb | grep /.*error.*/
+  (this will get only error part print out for us)
