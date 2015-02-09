@@ -1,0 +1,39 @@
+Daily Note
+
+1.
+What's the difference between ==, ===, equal? and eql?
+In the Object class, == equals to === equals to equal?,
+but normally been overwritten later in other classes
+
+In the Object class,
+==, === & equal? check if two objs are the same(with same object_id)
+eql? using hash to check if two objs have the same content
+
+In later inherenting classes, eql? is often been overwritten,
+to serve same function with ==, while it's been overwritten
+(e.g. to include type conversion)
+
+Also, in later inherenting classes, === is often been overwritten too
+In Range class, === check if obj is in the range
+In Regex class, use to check if match the regular expression
+In Proc class, use obj as parameter to execute proc
+(Up 3 usage are often used in case/when statement)
+
+2.
+Combining several commits into one commit with:
+1. git merge --squash
+2. git rebase --interactive
+
+While using "git rebase --interactive", we can actually do more things as:
+* pick    : choose this commit with no change
+* reword  : choose this commit with changing commit message
+* edit    : choose this commit with changing commit content
+* squash  : combine this commit with prior commit and using this commit message
+* fixup   : combine this commit with prior commit and using prior commit message
+
+more reference
+1.
+http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase
+2.
+http://blog.yorkxin.org/posts/2011/07/29/git-rebase/
+
