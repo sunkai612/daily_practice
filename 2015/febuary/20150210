@@ -1,0 +1,44 @@
+Daily Note
+
+1.
+Ruby $SAFE level
+
+In short, prohibit taint object and other dangerous input source to do things,
+& freeze existing object in highest level.
+
+Read this to know more about:
+http://ruby.about.com/od/qa/ss/What-Are-Taint-And-Trust.htm
+Read this to understand $SAFE level difference
+http://phrogz.net/programmingruby/taint.html
+
+
+2.
+What's the difference between dup & clone? And what is initialize_copy for?
+
+Both dup and clone initialize a new instance of the class of the object on which they are invoked.
+Then copy every instance variables and the taintedness of the receiver object to new allocated object.
+(beware that it's the reference being copied, not the value)
+
+clone do 2 things more than dup:
+(1) copy singleton methods of the receiver object
+(2) freeze copied object if original is frozen
+
+In general, in classes which overwrite these 2 methods, clone will do all original stuff,
+and dup will new an instance of the class of the object on which it is invoked
+
+API reference:
+http://www.ruby-doc.org/core-2.2.0/Object.html#method-i-dup
+http://www.ruby-doc.org/core-2.2.0/Object.html#method-i-clone
+
+If you want to specifically do some things after copying, you can write those doings into initialize_copy.
+dup & clone will execute this method after copying (clone will do this before frozen if needed).
+(& don't remember (1)to use super inside this method; (2)this is a private method)
+
+https://books.google.com.tw/books?id=rbY5mz-_VdQC&pg=PA243&lpg=PA243&dq=ruby+private+initialize_copy&source=bl&ots=10Sdamj1vO&sig=kMdwzk6rMjjki4_T-wjV9ldf-50&hl=zh-TW&sa=X&ei=TbjZVKneIuL6mQW0y4GQAw&ved=0CB4Q6AEwAA#v=onepage&q=ruby%20private%20initialize_copy&f=false
+
+
+3.
+If want to create a select-or-input field, we can search "select2" for solution
+check below for creating your own angular select2 directive:
+http://blog.revolunet.com/blog/2013/11/28/create-resusable-angularjs-input-component/
+
