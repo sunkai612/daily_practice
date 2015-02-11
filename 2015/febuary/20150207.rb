@@ -47,7 +47,18 @@ ary.collect! {|n| n+1 }     #=> [1,2,3,4,5,6,7,8,9,10]
 ary                         #=> [1,2,3,4,5,6,7,8,9,10]
 
 
-# # using compact to copy self with all nil elements removed
-ary = [nil,nil,1]
-ary.compact                 #=> [1]
+# # using combination to generate array of arrays
+# # which shows every possibly groups of elements
+# # group length decided by given number
+# # order of elements in group will not be concern
+
+# also check permutation, which do same things except order matter
+
+a = [1, 2, 3, 4]
+a.combination(1).to_a       #=> [[1],[2],[3],[4]]
+a.combination(2).to_a       #=> [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]
+a.combination(3).to_a       #=> [[1,2,3],[1,2,4],[1,3,4],[2,3,4]]
+a.combination(4).to_a       #=> [[1,2,3,4]]
+a.combination(0).to_a       #=> [[]]    # one combination of length 0
+a.combination(5).to_a       #=> []      # no combinations of length 5
 

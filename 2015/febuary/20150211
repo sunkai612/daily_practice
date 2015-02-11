@@ -1,0 +1,32 @@
+Daily Note
+
+1.
+Ruby global variable
+In ruby, global variables are prefixed with $ symbol.
+Check below links to find out more:
+https://github.com/ruby/ruby/blob/trunk/lib/English.rb
+http://jimneath.org/2010/01/04/cryptic-ruby-global-variables-and-their-meanings.html
+
+
+2.
+(keep_if & select!) VS (delete_if & reject!)
+All these 4 methods will alter original array and return altered result
+(Exception: when no change made, select! & reject! will return nil and no change will be done to original array)
+keep_if & select! are just the opposite of delete_if & reject!
+keep_if & select! keep element when result of executed block is true
+delete_if & reject! remove element when result of executed block is true
+Besides opposite, there's also one slight different, which is delete_if & reject! remove things every one block
+
+
+3.
+Playing with binary data in ruby
+Check below links to know more about turning string into binary elements array and vise versa:
+http://blog.bigbinary.com/2011/07/20/ruby-pack-unpack.html
+http://stackoverflow.com/questions/14293926/how-does-pack-and-unpack-work-in-ruby
+
+
+4.
+permutation vs combination
+Both these methods generate array of arrays,
+which group original array elements into array with size of given number.
+The difference between 2 methods is that combination does't care about order of elements in generated array
