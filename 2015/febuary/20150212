@@ -1,0 +1,14 @@
+Daily Note
+
+1.
+Active Record Enums
+http://robots.thoughtbot.com/whats-new-in-edge-rails-active-record-enum
+https://ruby-china.org/topics/18504
+http://edgeapi.rubyonrails.org/classes/ActiveRecord/Enum.html#method-i-enum
+
+
+2.
+Checkout to different commit
+(1) using "git log" to find the commit you want to checkout
+(2) using "git checkout <commit hash>" to go to that commit
+(3) using "git checkout <branch name>" to go back to work

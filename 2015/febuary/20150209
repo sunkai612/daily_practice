@@ -6,8 +6,8 @@ In the Object class, == equals to === equals to equal?,
 but normally been overwritten later in other classes
 
 In the Object class,
-==, === & equal? check if two objs are the same(with same object_id)
-eql? using hash to check if two objs have the same content
+==, ===, eql? using hash to check if two objs have the same content
+equal? check if two objs are the same(with same object_id)
 
 In later inherenting classes, eql? is often been overwritten,
 to serve same function with ==, while it's been overwritten

@@ -82,8 +82,6 @@ abc = [65,66,67]
 abc.pack("c*")                    #=> "ABC"
 
 
-# # using permutation to generate 
-
 # # using permutation to generate array of arrays
 # # which shows every possibly groups of elements
 # # group length decided by given number
