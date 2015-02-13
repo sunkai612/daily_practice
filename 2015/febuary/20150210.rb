@@ -94,9 +94,9 @@ arry.include?("5")                #=> false
 
 # find_index has same usage, and to find last element fulfill condition, use rindex
 ary = [0,1,2,3,4,0,1,2,3,4]
-ary.find_index("0")               #=> nil
-ary.find_index(3)                 #=> 3
-ary.find_index {|x| x > 3}        #=> 4
+ary.index("0")               #=> nil
+ary.index(3)                 #=> 3
+ary.index {|x| x > 3}        #=> 4
 
 
 # # "initialize_copy" is a PRIVATE METHOD

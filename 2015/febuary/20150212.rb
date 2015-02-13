@@ -108,6 +108,6 @@ a                                     #=> ["a","b","c"]
 
 
 # # using reverse to get a new same array with reversed order
-[0,1,2]                               #=> [2,1,0]
-[0]                                   #=> [0]
+[0,1,2].reverse                       #=> [2,1,0]
+[0].reverse                           #=> [0]
 
